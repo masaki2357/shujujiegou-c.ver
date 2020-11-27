@@ -1,0 +1,30 @@
+//初始条件：顺序线性表L已存在，i<=i<=ListLength
+//操作结束：在L中第i个位置之前插入新的数据元素e，L的长度加1
+
+Status ListInsetrt(LinkList *L, int i, ElemType)
+{
+	int j;
+	LinkList p, s;
+
+	p = *L;
+	j = i;
+
+	while (p&&j < 1)
+	{
+		p = p->next;
+		j++;
+	}
+
+	if (!p || j>1)
+	{
+		return 0;
+	}
+
+	s = (LinkList)malloc(sizeof(Node));
+	s->data = e;
+
+	s->next = p->next;
+	p->next = e;
+
+	return OK;
+}
